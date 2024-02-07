@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #192a32;
   min-height: 100vh;
+  color: #e7e7e7;
+  font-family: "Cinzel", serif;
+}
+.App {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.board {
+  height: fit-content;
+  width: fit-content;
+  border: 4px solid #41e8df;
+  border-radius: 20px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  font-family: "Lexend Deca", sans-serif;
+  margin-top: 1em;
+  box-shadow: 0 5px 2px #040708ca;
 }
 
-.App-link {
-  color: #61dafb;
+.h1-text {
+  font-size: 2.4em;
+  letter-spacing: 0.04em;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 0.9em;
+  margin-bottom: 0.2em;
+  border-bottom: 2px solid #35bcb6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0.55em;
+  height: 0.55em;
+  background-color: #1f3540;
+  color: #35bcb6;
+  font-size: 2.7em;
+  padding: 0.8em;
+  margin: 0.4em;
+  text-align: center;
+  border-radius: 13px;
+  box-shadow: 0 5px 2px #040708ca;
+}
+
+#player-text {
+  font-size: 1.4em;
+  word-spacing: 0.2em;
+  letter-spacing: 0.05em;
+  font-weight: lighter;
+  color: #fff;
+  margin: 0;
+  margin-top: 1em;
+}
+
+.tile:hover {
+  background-color: #27455b;
+  cursor: pointer;
+}
+
+.game-over {
+  font-size: 1.8em;
+  background-color: #35bcb6;
+  color: #1f3540;
+  padding: 0.4em;
+  margin-top: 0.7em;
+  border-radius: 10px;
+}
+
+.tic-tac-toe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tile-win {
+  background-color: #35bcb6;
+  color: #1f3540;
+}
+
+.reset-btn {
+  padding: 0.5em;
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #1f3540;
+  color: #35bcb6;
+  outline: none;
+  border: 1px solid #41e8df;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #27455b;
 }
